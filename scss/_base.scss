@@ -1,0 +1,45 @@
+@import 'variables';
+
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+    font-size: 100%;
+    vertical-align: baseline;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    text-align: center;
+    font-family: $font-family-default;
+    color: $text-color;
+    background-color: $dark-bg;
+    padding-top: $header-height;
+    line-height: 1.6;
+}
+
+p {
+   margin-bottom: 20px;
+   font-size: 18px;
+}
+
+.title {
+    margin-bottom: 30px;
+    font-size: 40px;
+    font-weight: 600;
+    text-transform: uppercase;
+    color: $text-color;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 15px;
+    padding-right: 15px;
+} 

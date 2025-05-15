@@ -1,0 +1,92 @@
+@import 'variables';
+
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: $header-height;
+    background: #000000;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    padding: 0 20px;
+}
+
+.logo {
+    img {
+        vertical-align: middle;
+    }
+}
+
+.navbar {
+    display: flex;
+}
+
+.navbar a {
+    display: block;
+    padding: 15px 20px;
+    color: $text-color;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 18px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.navbar a:hover,
+.navbar a.active {
+    background: $primary-color ;
+    color: $text-color;
+}
+
+.content-section {
+    min-height: 50vh;
+    padding: ($header-height + 40px) 20px 40px 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.hero {
+    @extend .content-section;
+    height: 60vh; 
+    background: url(../img/header.jpg) no-repeat center center / cover fixed;
+    color: $text-color;
+    justify-content: center;
+
+    h1 {
+        margin-bottom: 20px;
+        font-size: 48px;
+        color: $text-color;
+        font-weight: 700;
+        text-transform: uppercase;
+    }
+    p {
+        font-size: 20px;
+        margin-bottom: 30px;
+    }
+}
+
+.footer-contact {
+    @extend .content-section;
+    background: $dark-bg;
+    padding-top: 40px;
+    padding-bottom: 20px; 
+
+    address {
+        font-style: normal;
+        margin: 10px 0;
+    }
+
+    iframe {
+        margin-top: 20px;
+        max-width: 100%;
+        width: 100%;
+        border-radius: 5px;
+        border: 0;
+    }
+} 
